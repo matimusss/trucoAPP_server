@@ -1,0 +1,16 @@
+{
+  "name": "trucsvr",
+  "version": "1.0.0",
+  "description": "trucsvr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node -r esm src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boardgame.io": "^0.50.2",
+    "esm": "^3.2.25"
+  }
+}
