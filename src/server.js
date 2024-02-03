@@ -10,10 +10,10 @@ process.on('uncaughtException', function (err) {
 const server = Server({
   games: [Truco],
   origins: [
-'http://trucortc.onrender.com',
-'http://trucortc.onrender.com:3000',
-'https://trucortc.onrender.com',
-'https://trucortc.onrender.com:3000',
+'http://trucoapp-client.onrender.com',
+'http://trucoapp-client.onrender.com:3000',
+'https://trucoapp-client.onrender.com',
+'https://trucoapp-client.onrender.com:3000',
 '3.134.238.10',
 '3.129.111.220',
 '52.15.118.168',
