@@ -41,23 +41,19 @@ const server = Server({
 server.run(8000, () => {
   console.log('Server is running on port 8000');
 
-
-
-  const data = {
-    mensaje: 'Hola desde Node.js'
-  };
-  
-  axios.post('https://trucoapp-postgrerouter.onrender.com/api/instrucciones', data)
-    .then(response => {
-      console.log(response.data); // Debería mostrar 'Instrucciones recibidas correctamente.'
-    })
-    .catch(error => {
-      console.error('Error al enviar la solicitud:', error);
-    });
-
-
-
-
-
-
 });
+
+
+
+const data = {
+  mensaje: 'Hola desde Node.js'
+};
+
+axios.post('https://trucoapp-postgrerouter.onrender.com/api/instrucciones', data)
+  .then(response => {
+    console.log(response.data); // Debería mostrar 'Instrucciones recibidas correctamente.'
+  })
+  .catch(error => {
+    console.error('Error al enviar la solicitud:', error);
+  });
+
