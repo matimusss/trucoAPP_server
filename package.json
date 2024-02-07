@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.7",
     "boardgame.io": "^0.50.2",
     "esm": "^3.2.25"
   }

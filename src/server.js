@@ -1,5 +1,7 @@
 const { Server, Origins } = require('boardgame.io/server');
 const { Truco } = require('./Game');
+const axios = require('axios');
+
 
 // Manejo de uncaughtException
 process.on('uncaughtException', function (err) {
@@ -38,4 +40,24 @@ const server = Server({
 
 server.run(8000, () => {
   console.log('Server is running on port 8000');
+
+
+
+  const data = {
+    mensaje: 'Hola desde Node.js'
+  };
+  
+  axios.post('https://trucoapp-postgrerouter.onrender.com/api/instrucciones', data)
+    .then(response => {
+      console.log(response.data); // Debería mostrar 'Instrucciones recibidas correctamente.'
+    })
+    .catch(error => {
+      console.error('Error al enviar la solicitud:', error);
+    });
+
+
+
+
+
+
 });
